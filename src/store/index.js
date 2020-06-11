@@ -10,7 +10,8 @@ export default new Vuex.Store({
     news: [],
     jobs: [],
     ask: [],
-    user:{},
+    user: {},
+    item: {},
   },
   mutations,
   getters: {

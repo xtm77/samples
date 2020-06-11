@@ -1,9 +1,7 @@
 <template>
   <div>
-    <div v-for="(item, index) in askItems" :key="item.id">
-      <p>
-        {{index}} - {{ item.title }} - {{item.user}}
-      </p>
+    <div v-for="item in askItems" :key="item.id">
+      <router-link v-bind:to="`/item/${item.id}`">{{ item.title }}</router-link>
     </div>
   </div>
 </template>

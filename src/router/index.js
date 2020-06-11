@@ -4,6 +4,7 @@ import Home from '../views/Home.vue'
 import Jobs from '../views/JobsView.vue';
 import Ask from '../views/AskView.vue';
 import UserView from '../views/UserView.vue';
+import ItemView from '../views/ItemView.vue';
 
 Vue.use(VueRouter)
 
@@ -35,6 +36,10 @@ Vue.use(VueRouter)
     path: '/user/:id',
     name: 'User',
     component: UserView
+  },
+  {
+    path: '/item/:id',
+    component: ItemView
   }
 ]
 
