@@ -1,8 +1,16 @@
 <template>
   <div>
-    <div v-for="item in askItems" :key="item.id">
-      <router-link v-bind:to="`/item/${item.id}`">{{ item.title }}</router-link>
-    </div>
+    <ul>
+      <li v-for="item in askItems" :key="item.id">
+        <router-link v-bind:to="`/item/${item.id}`">{{ item.title }}</router-link>
+      </li>
+    </ul>
+    <!-- <div v-for="item in askItems" :key="item.id">
+      <i class="fas fa-angle-double-right fa-spin fa-fw"></i>
+      <router-link v-bind:to="`/item/${item.id}`"><i class="fas fa-camera fa-spin fa-2x fa-fw"></i>{{ item.title }}</router-link>
+      <i class="fas fa-spinner fa-spin fa-2x fa-fw"></i>
+    </div> -->
+    
   </div>
 </template>
 <script>
@@ -29,3 +37,6 @@ export default {
   }
 }
 </script>
+<style scoped>
+
+</style>

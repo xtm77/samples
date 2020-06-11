@@ -2,9 +2,10 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Jobs from '../views/JobsView.vue';
-import Ask from '../views/AskView.vue';
+import Ask from '../views/AskView2.vue';
 import UserView from '../views/UserView.vue';
 import ItemView from '../views/ItemView.vue';
+import NewsView from '../views/NewsView.vue';
 
 Vue.use(VueRouter)
 
@@ -24,12 +25,12 @@ Vue.use(VueRouter)
   },
   {
     path: '/jobs',
-    name: 'Jobs',
+    name: 'jobs',
     component: Jobs
   },
   {
     path: '/ask',
-    name: 'Ask',
+    name: 'ask',
     component: Ask
   },
   {
@@ -40,6 +41,12 @@ Vue.use(VueRouter)
   {
     path: '/item/:id',
     component: ItemView
+  },
+  {
+    path: '/news',
+    name: 'news',
+    component: NewsView
+
   }
 ]
 

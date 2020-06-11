@@ -4,25 +4,36 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link> |
       <router-link to="/jobs">Jobs</router-link> |
-      <router-link to="/ask">Ask</router-link>
+      <router-link to="/ask">Ask</router-link> |
+      <router-link to="/news">News</router-link>
     </div>
-    <router-view/>
-    <News/>
+    <transition name="fade">
+      <router-view/>
+    </transition>
+    
   </div>
 </template>
 <script>
-import News from './components/News';
+// import News from './components/News';
 
 export default {
-  components: {
-    News,
-  },
+  // components: {
+  //   News,
+  // },
   data() {
     return {}
   }
 }
 </script>
-
+<style>
+/* @import './assets/css/all.css'; */
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
+</style>
 <style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
