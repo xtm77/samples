@@ -10,8 +10,9 @@
     <transition name="fade">
       <router-view/>
     </transition>
-    
+    <spinner loading="true"></spinner>
   </div>
+  
 </template>
 <script>
 // import News from './components/News';

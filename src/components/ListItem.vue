@@ -1,17 +1,22 @@
 <template>
-  <div>
-    <ul>
-      <li v-for="item in list" :key="item.id">
-        <div class="points">{{ item.points }}</div>
-        <div class="title">
+  <v-container>
+    <v-row v-for="item in list" :key="item.id" cols="3">
+      <v-col class="points">
+        {{item.points}}
+      </v-col>
+      <v-col class="title">
+        <template v-if="item.domain">
+          <a :href="item.url">{{item.title}}</a>
+        </template>
+        <template v-else>
           <router-link v-bind:to="`/item/${item.id}`">{{ item.title }}</router-link>
-        </div>
-        <div class="user">
-          <router-link v-bind:to="`/user/${item.id}`">{{ item.user }}</router-link>
-        </div>
-      </li>
-    </ul>
-  </div>
+        </template>
+      </v-col>
+      <v-col>
+        <router-link v-bind:to="`/user/${item.id}`">{{ item.user }}</router-link>
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
 <script>
 export default {
