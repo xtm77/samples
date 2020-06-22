@@ -1,11 +1,10 @@
 <template>
-  <div>
-    
+  <dive>
     <list-item></list-item>
-  </div>
+  </dive>
 </template>
 <script>
-import ListItem from '@/components/ListItem';
+import ListItem from '../components/ListItem.vue'
 export default {
   components: {
     ListItem

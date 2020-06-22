@@ -10,7 +10,7 @@
     <transition name="fade">
       <router-view/>
     </transition>
-    <spinner loading="true"></spinner>
+    
   </div>
   
 </template>
